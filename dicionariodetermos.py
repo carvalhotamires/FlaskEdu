@@ -13,24 +13,30 @@ def adicionar_termos(bd, termo, definicao):
 
 def visualizar_termos(bd):
     logger.info('Visualização dos termos.')
-    for i in range(len(bd)):
-        print(f'{i+1} | {bd[i][0]} | {bd[i][1]}')
+    for idx in range(len(bd)):
+        print(f'{idx+1} | {bd[idx][0]} | {bd[idx][1]}')
 
 def alterar_termo(bd, indice, termo, definicao):
     bd[indice][0] = termo
     bd[indice][1] = definicao
     return bd
 
-def deletar_termo(bd, indice, termo, definicao):
-    bd[indice][0] = termo
-    bd[indice][1] = definicao
-    return bd
+def deletar_termo(bd, indice):
+    # Verifica se o índice é válido para evitar erros
+    if 0 <= indice < len(bd):
+        termo_a_remover = bd[indice][0]  # Pega o termo antes de deletar para a mensagem de log
+        del bd[indice]
+        logger.info(f"Termo '{termo_a_remover}' deletado com sucesso!")
+        return bd
+    else:
+        logger.warning(f"Índice {indice + 1} inválido. Termo não encontrado!")
+        return bd
 
 def salvar_termos(bd):
     with open('bd_termos.txt', 'w', encoding='utf-8') as arquivo:
-        for i in range(len(bd)):
-            logger.info(f'Salvando os termos {bd[i][0]}')
-            arquivo.write(f'{bd[i][1]}, {bd[i][0]}\n')
+        for idx in range(len(bd)):
+            logger.info(f'Salvando os termos {bd[idx][0]}')
+            arquivo.write(f'{bd[idx][1]}, {bd[idx][0]}\n')
 
 while True:
     print('1 - Adicionar Termo')
@@ -47,13 +53,13 @@ while True:
         op = -1
 
     if op == 1:
-        logger.info('Iniciando o cadstro do termo.')
-        termo = input('Digite o termo que deseja adicionar: ')
-        definicao = input('Digite a definição do termo: ')
+        logger.info('Iniciando o cadastro do termo.')
+        novo_termo = input('Digite o termo que deseja adicionar: ')
+        nova_definicao = input('Digite a definição do termo: ')
         bd_termos = adicionar_termos(
             bd=bd_termos,
-            termo=termo,
-            definicao=definicao
+            termo=novo_termo,
+            definicao=nova_definicao
         )
         print('Termo e definição cadastrados!')
 
@@ -67,13 +73,13 @@ while True:
         visualizar_termos(bd_termos)
         print(visualizar_termos(bd_termos))
         i = int(input('Qual termo deseja alterar? '))
-        termo = input('Digite o novo termo: ')
-        definicao = input('Digite a nova definição para o termo: ')
+        novo_termo = input('Digite o novo termo: ')
+        nova_definicao = input('Digite a nova definição para o termo: ')
         bd_termos = alterar_termo(
             bd=bd_termos,
             indice=(i-1),
-            termo=termo,
-            definicao=definicao
+            termo=novo_termo,
+            definicao=nova_definicao
         )
         logger.info('Termo alterado com sucesso!')
         logger.info('Termo cadastrado com sucesso!')
@@ -85,9 +91,7 @@ while True:
 
         bd_termos = deletar_termo(
             bd=bd_termos,
-            indice=(i-1),
-            termo=termo,
-            definicao=definicao
+            indice=(i-1)
         )
         logger.info('Termo deletado com sucesso!')
 
