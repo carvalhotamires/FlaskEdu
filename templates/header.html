@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} FlaskEdu {% endblock %}</title>
     <!--GOOGLE FONTS - INICIO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +40,9 @@
 
             </div><!--btn-contato-->
         </div><!--interface-->
+        <main class="interface-1">
+            {% block conteudo %}{% endblock %}
+        </main>
     </header>
 </body>
 </html>
