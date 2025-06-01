@@ -23,8 +23,4 @@ def fundamentos():
 def perguntas():
     return render_template('perguntas.html')
 
-@app.route('/header')
-def header():
-    return render_template('header.html')
-
-app.run()
+app.run(debug=True)
