@@ -1,4 +1,10 @@
 from loguru import logger
+import os
+caminho = os.path.join('glossario.csv')
+
+
+with open(caminho, 'r', encoding='utf-8') as f:
+    conteudo = f.read()
 
 bd_termos = [
     ['a', 'vogal'],
@@ -38,67 +44,3 @@ def salvar_termos(bd):
             logger.info(f'Salvando os termos {bd[idx][0]}')
             arquivo.write(f'{bd[idx][1]}, {bd[idx][0]}\n')
 
-while True:
-    print('1 - Adicionar Termo')
-    print('2 - Visualizar Termos')
-    print('3 - Alterar Termo')
-    print('4 - Deletar Termo')
-    print('5 - Salvar Termos')
-
-    try:
-        op = int(input('Digite uma opção: '))
-    except Exception as e:
-        logger.error(f'Erro: {e}')
-        logger.info('Digite um valor numérico.')
-        op = -1
-
-    if op == 1:
-        logger.info('Iniciando o cadastro do termo.')
-        novo_termo = input('Digite o termo que deseja adicionar: ')
-        nova_definicao = input('Digite a definição do termo: ')
-        bd_termos = adicionar_termos(
-            bd=bd_termos,
-            termo=novo_termo,
-            definicao=nova_definicao
-        )
-        print('Termo e definição cadastrados!')
-
-    elif op == 2:
-        logger.info('Iniciando a visualização dos termos.')
-        visualizar_termos(bd_termos)
-        logger.info('Termos visualizados com sucesso!')
-
-    elif op == 3:
-        logger.info('Iniciando a alteração do termo.')
-        visualizar_termos(bd_termos)
-        print(visualizar_termos(bd_termos))
-        i = int(input('Qual termo deseja alterar? '))
-        novo_termo = input('Digite o novo termo: ')
-        nova_definicao = input('Digite a nova definição para o termo: ')
-        bd_termos = alterar_termo(
-            bd=bd_termos,
-            indice=(i-1),
-            termo=novo_termo,
-            definicao=nova_definicao
-        )
-        logger.info('Termo alterado com sucesso!')
-        logger.info('Termo cadastrado com sucesso!')
-
-    elif op == 4:
-        logger.info('Iniciando a exclusão do termo.')
-        visualizar_termos(bd_termos)
-        i = int(input('Qual termo deseja deletar? '))
-
-        bd_termos = deletar_termo(
-            bd=bd_termos,
-            indice=(i-1)
-        )
-        logger.info('Termo deletado com sucesso!')
-
-    elif op == 5:
-        logger.info('Iniciando persistência dos termos.')
-        salvar_termos(bd_termos)
-        logger.info('Termos salvos com sucesso!')
-
-    else:
-        print(f'Opção {op} inválida!')
