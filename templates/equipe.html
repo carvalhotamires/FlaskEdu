@@ -4,11 +4,22 @@
 
 {% block conteudo %}
 <style>
+    .flex{
+    display:flex;
+    }
 .img-topo-site img {
     width: 500px; /* Ou o tamanho que você quiser */
     height: auto; /* Mantém proporção */
+    }
+    section.inicio-do-site{
+    padding:40px 4%;
+    }
+  section.inicio-do-site .flex{
+    align-items:center;
+    justify-content:center;
 
-}
+
+    }
 </style>
   <main>
         <section class="inicio-do-site">
@@ -23,6 +34,17 @@
 
         <div class="img-topo-site">
             <img src="/static/images/equipe%201.png" alt="Arthur">
+            <h4>Arthur Vinício da Silva Barbosa</h4>
+            <h3>Front-End</h3>
+            <img src="/static/images/equipe%202.png" alt="Lucas">
+            <h4>Lucas Aguiar Braga Viana</h4>
+            <h3>Back-End</h3>
+            <img src="/static/images/equipe%203.png" alt="Flávia">
+            <h4>Flávia Rhuana Pereira Sales</h4>
+            <h3>Back-End</h3>
+            <img src="/static/images/equipe.png" alt="Tamires">
+            <h4> Tamires Carvalho da Silva</h4>
+            <h3>Front-End</h3>
 
     </div> <!--interface-->
              </div><!--flex-->
