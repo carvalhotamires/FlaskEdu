@@ -23,7 +23,7 @@ def glossario():
 
     glossario_de_termos = []
 
-    with open('bd_glossario.csv', newline='', encoding='utf-8') as csvfile:
+    with open('bd_glossario.csv', newline='', encoding='latin-1') as csvfile:
         reader = csv.reader(csvfile, delimiter=';')
 
         for t in reader:
@@ -42,7 +42,7 @@ def criar_termo():
     termo = request.form['termo']
     definicao = request.form['definicao']
 
-    with open('bd_glossario.csv', 'a', newline='', encoding='utf-8') as csvfile:
+    with open('bd_glossario.csv', 'a', newline='', encoding='latin-1') as csvfile:
         writer = csv.writer(csvfile, delimiter=';')
         writer.writerow([termo, definicao])
 
@@ -61,7 +61,7 @@ def alterar_termo(termo_id):
 @app.route('/excluir_termo/<int:termo_id>', methods=['POST'])
 def excluir_termo(termo_id):
 
-    with open('bd_glossario.csv', 'r', newline='', encoding='utf-8') as file:
+    with open('bd_glossario.csv', 'r', newline='', encoding='latin-1') as file:
         reader = csv.reader(file)
         linhas = list(reader)
 
