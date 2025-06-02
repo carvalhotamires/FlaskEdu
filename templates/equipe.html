@@ -16,10 +16,38 @@
     }
   section.inicio-do-site .flex{
     align-items:center;
-    justify-content:center;
+    justify-content:center;}
+    .img-topo-site {
+  display: flex;
+  flex-direction: column; /* mantém os membros empilhados */
+  gap: 30px;
+}
 
+.membro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #111; /* opcional para destaque */
+  padding: 10px;
+  border-radius: 8px;
+}
 
-    }
+.membro img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.membro .info h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.membro .info h4 {
+  margin: 5px 0 0 0;
+  font-weight: 400;
+  color: #ccc;
+}
 </style>
   <main>
         <section class="inicio-do-site">
@@ -33,19 +61,34 @@
             <h2><p style="text-transform: uppercase;">Transformamos ideias em realidade digital — conheça quem faz isso acontecer<span>!</span></p></h2>
 
         <div class="img-topo-site">
+            <div class="membro">
             <img src="/static/images/equipe%201.png" alt="Arthur">
-            <h4>Arthur Vinício da Silva Barbosa</h4>
-            <h3>Front-End</h3>
+                <div class="info">
+            <h2>Arthur Vinício da Silva Barbosa</h2>
+            <h4>Front-End</h4>
+                     </div><!--membro1-->
+                 </div><!--membro1-->
+                <div class="membro">
             <img src="/static/images/equipe%202.png" alt="Lucas">
-            <h4>Lucas Aguiar Braga Viana</h4>
-            <h3>Back-End</h3>
+                    <div class="info">
+            <h2>Lucas Aguiar Braga Viana</h2>
+            <h4>Back-End</h4>
+                        </div><!--membro1-->
+                 </div><!--membro1-->
+            <div class="membro">
             <img src="/static/images/equipe%203.png" alt="Flávia">
-            <h4>Flávia Rhuana Pereira Sales</h4>
-            <h3>Back-End</h3>
+            <div class="info">
+            <h2>Flávia Rhuana Pereira Sales</h2>
+            <h4>Back-End</h4>
+            </div><!--membro1-->
+                 </div><!--membro1-->
+            <div class="membro">
             <img src="/static/images/equipe.png" alt="Tamires">
-            <h4> Tamires Carvalho da Silva</h4>
-            <h3>Front-End</h3>
-
+                <div class="info">
+            <h2> Tamires Carvalho da Silva</h2>
+            <h4>Front-End</h4>
+             </div><!--membro1-->
+                 </div><!--membro1-->
     </div> <!--interface-->
              </div><!--flex-->
             </div><!--txt-topo-site-->
