@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Chatbot Gemini</title>
-</head>
-<body>
-    <h1>Faça sua pergunta ao Chatbot</h1>
-    <form action="/responder" method="post">
-        <input type="text" name="pergunta" placeholder="Digite sua pergunta aqui" required>
-        <button type="submit">Enviar</button>
-    </form>
+{% extends 'base.html' %}
+
+{% block title %}Chatbot | FlaskEdu{% endblock %}
+
+{% block conteudo %}
+<div class="chat-container">
+    <h2>Faça sua Pergunta ao Chatbot</h2>
 
     {% if resposta %}
-        <h2>Resposta do Gemini:</h2>
-        <p>{{ resposta }}</p>
+        <div class="resposta">
+            <h3>Resposta do Gemini:</h3>
+            <p>{{ resposta }}</p>
+        </div>
     {% endif %}
 
-    <p><a href="/">Voltar à página inicial</a></p>
-</body>
-</html>
+    <form action="/responder" method="post" class="input-box">
+        <input type="text" name="pergunta" placeholder="Digite sua pergunta..." required>
+        <button type="submit" class="send-button">
+            <img src="{{ url_for('static', filename='images/paper-plane.png') }}" alt="Enviar" style="width: 20px; height: 20px;">
+        </button>
+    </form>
+</div>
+{% endblock %}
