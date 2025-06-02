@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Fiz as alterações para funcionar o header em todas as paginas">
+    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Menu Adicionar Termos">
       <change beforePath="$PROJECT_DIR$/templates/novo_termo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo_termo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748894463715</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Menu Adicionar Termos">
+      <option name="closed" value="true" />
+      <created>1748902400697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748902400697</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +197,7 @@
     <MESSAGE value="botões glossario" />
     <MESSAGE value="Remoção do botão alterar" />
     <MESSAGE value="botão editar e alterar" />
-    <option name="LAST_COMMIT_MESSAGE" value="botão editar e alterar" />
+    <MESSAGE value="Menu Adicionar Termos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu Adicionar Termos" />
   </component>
 </project>
