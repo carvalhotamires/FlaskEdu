@@ -12,7 +12,7 @@ api_key = os.getenv('GEMINI_API_KEY')
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('inicio.html')
+    return render_template('index.html')
 
 @app.route('/equipe')
 def equipe():
@@ -66,9 +66,7 @@ def excluir_termo(termo_id):
 
     return redirect(url_for('glossario'))
 
-@app.route('/fundamentos')
-def fundamentos():
-    return render_template('fundamentos.html')
+
 
 #Config Generative AI
 genai.configure(api_key=api_key)
