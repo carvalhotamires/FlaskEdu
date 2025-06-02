@@ -1,0 +1,88 @@
+Index: app.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask, render_template\r\n\r\napp = Flask(__name__)\r\n\r\n@app.route('/')\r\ndef home():\r\n    return render_template('inicio.html')\r\n\r\n@app.route('/equipe')\r\ndef equipe():\r\n    return render_template('equipe.html')\r\n\r\n@app.route('/dicionario')\r\ndef dicionario():\r\n    return render_template('dicionario.html')\r\n\r\n@app.route('/fundamentos')\r\ndef fundamentos():\r\n    return render_template('fundamentos.html')\r\n\r\n@app.route('/perguntas')\r\ndef perguntas():\r\n    return render_template('perguntas.html')\r\n\r\napp.run()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app.py b/app.py
+--- a/app.py	(revision 85ce2656eb9ab16a798d5a194f41a6d5b4af9793)
++++ b/app.py	(date 1748819187395)
+@@ -1,6 +1,7 @@
+ from flask import Flask, render_template
+ 
+ app = Flask(__name__)
++API_KEY='AIzaSyC19cvjucAv9oAFH0PIaF0yw0atiyO5E24'
+ 
+ @app.route('/')
+ def home():
+@@ -18,6 +19,16 @@
+ def fundamentos():
+     return render_template('fundamentos.html')
+ 
++#Config Generative AI
++client = genai.Client(api_key='API_KEY')
++
++response = client.models.generate_content(
++    model="gemini-2.0-flash",
++    contents="Explain how AI works in a few words",
++)
++
++print(response.text)
++
+ @app.route('/perguntas')
+ def perguntas():
+     return render_template('perguntas.html')
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bda395f7-33c5-40d7-8404-5ee34d501765\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/251-cc-grupo13.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/251-cc-grupo13.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/dicionariodetermos.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/dicionariodetermos.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {}\r\n}</component>\r\n  <component name=\"GitHubPullRequestState\">{\r\n  &quot;prStates&quot;: [\r\n    {\r\n      &quot;id&quot;: {\r\n        &quot;id&quot;: &quot;PR_kwDOOyUw7c6YKyK-&quot;,\r\n        &quot;number&quot;: 1\r\n      },\r\n      &quot;lastSeen&quot;: 1748802024092\r\n    }\r\n  ]\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/carvalhotamires/FlaskEdu.git\",\r\n    \"accountId\": \"92ad91d0-a3fb-4c5e-9b20-4cbb022bfbdf\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2xtLJwFTemPgN2k9IJOp8dgBI1l\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"main\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"stardust.markdown.MarkdownSplitEditorSuppressor:keyList\": []\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-2ee2454479a3-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.122\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bda395f7-33c5-40d7-8404-5ee34d501765\" name=\"Changes\" comment=\"\" />\r\n      <created>1748752365267</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1748752365267</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 85ce2656eb9ab16a798d5a194f41a6d5b4af9793)
++++ b/.idea/workspace.xml	(date 1748818687953)
+@@ -4,11 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/251-cc-grupo13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/251-cc-grupo13.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Att dicionario">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/dicionariodetermos.py" beforeDir="false" afterPath="$PROJECT_DIR$/dicionariodetermos.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -53,6 +51,7 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "Python.dicionariodetermos.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "RunOnceActivity.git.unshallow": "true",
+     "git-widget-placeholder": "main"
+@@ -76,6 +75,19 @@
+       <option name="presentableId" value="Default" />
+       <updated>1748752365267</updated>
+     </task>
++    <task id="LOCAL-00001" summary="Att dicionario">
++      <option name="closed" value="true" />
++      <created>1748809782401</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1748809782401</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Att dicionario" />
++    <option name="LAST_COMMIT_MESSAGE" value="Att dicionario" />
++  </component>
+ </project>
+\ No newline at end of file
