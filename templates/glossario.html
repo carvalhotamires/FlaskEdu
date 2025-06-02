@@ -34,22 +34,39 @@
 </head>
 <body>
     <table>
-        <caption>Dicionário de Termos</caption>
-        <thead>
-            <tr>
-                <th>Termo</th>
-                <th>Definição</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for termo in termos %}
-            <tr>
-                <td>{{ termo[0] }}</td>
-                <td>{{ termo[1] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <th>#</th>                <!-- Índice -->
+            <th>Termo</th>            <!-- Termo -->
+            <th>Definição</th>        <!-- Definição -->
+            <th>Ações</th>            <!-- Coluna vazia -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in glossario %}
+        <tr>
+            <td>{{ loop.index }}</td>    <!-- Índice começa em 1 -->
+            <td>{{ item[0] }}</td>       <!-- Termo -->
+            <td>{{ item[1] }}</td>       <!-- Definição -->
+            <td></td>                    <!-- Coluna vazia -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    <div style="display: block; margin: 20px auto text-align: center;">
+        <a href="{{ url_for('novo_termo') }}">
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+            <a href="{{ url_for('novo_termo') }}">
+                 <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+                ➕ Adicionar Termo
+             </button>
+         </a>
+    </div>
+
+        </a>
+    </div>
+
 </body>
 </html>
 
