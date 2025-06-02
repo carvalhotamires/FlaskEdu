@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} FlaskEdu {% endblock %}</title>
     <!--GOOGLE FONTS - INICIO-->
@@ -11,12 +12,12 @@
     <!--GOOGLE FONTS - FIM-->
 
     <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='equipe.css') }}">
 </head>
 <body>
     {% include 'header.html' %}
 
-    <main class="interface-1">
-        {% block conteudo %}{% endblock %}
-    </main>
+    {% block conteudo %}{% endblock %}
+
 </body>
 </html>
