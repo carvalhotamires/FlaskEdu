@@ -1,50 +1,29 @@
-{% extends 'base.html' %}
-
-{% block title %}Dicionário {% endblock %}
-
+{% extends "base.html" %}
 {% block conteudo %}
+<h1>Adicionar Termo</h1>
+<div style="background: linear-gradient(55deg, #000000, #008B8B); padding: 10px; border-radius: 10px; border: 1px solid white; max-width: 800px; margin: auto; margin-top: 40px;">
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Dicionário de Termos</title>
-    <link rel="stylesheet" href="header.css">
-</head>
-<body>
-    <table>
-        <caption>Dicionário de Termos</caption>
-        <thead>
-            <tr>
-                <th>Termo</th>
-                <th>Definição</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for termo in glossario %}
-            <tr>
-                <td>{{ termo[0] }}</td>
-                <td>{{ termo[1] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <form method="POST" action="{{ url_for('glossario') }}">
+        <!-- Seção 1: Termo -->
+        <div style="margin-top: 20px; text-align: center">
+            <h3 style="font-size: 1.5rem">Termo</h3>
+            <input type="text" id="termo" name="termo" required
+                   style="width: 95%; padding: 10px; border-radius: 5px; border: none;">
+        </div>
 
+        <!-- Seção 2: Definição -->
+        <div style="margin-top: 20px; text-align: center">
+            <h3 style="font-size: 1.5rem">Definição</h3>
+            <textarea id="definicao" name="definicao" required
+                      style="width: 95%; height: 200px; padding: 10px; border-radius: 5px; border: none;"></textarea>
+        </div>
 
-    <div style="display: block; margin: 20px auto text-align: center;">
-        <a href="{{ url_for('novo_termo') }}">
-        <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
-            <a href="{{ url_for('novo_termo') }}">
-                 <button style="background-color: #483D8B; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-                ➕ Adicionar Termo
-             </button>
-         </a>
-    </div>
-
-        </a>
-    </div>
-
-</body>
-</html>
-
+        <!-- Botão -->
+        <div style="text-align: center; margin-top: 15px">
+            <button type="submit" style="background-color: purple; color: white; padding: 10px 20px; border: 1px solid white; border-radius: 5px;">
+                ➕ Adicionar
+            </button>
+        </div>
+    </form>
+</div>
 {% endblock %}

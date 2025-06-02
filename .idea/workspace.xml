@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Fiz as alterações para funcionar o header em todas as paginas">
+      <change afterPath="$PROJECT_DIR$/static/images/equipe 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/equipe 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/equipe 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/equipe.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/banner - Equipe.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/equipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/equipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
