@@ -48,10 +48,20 @@ def criar_termo():
 
     return redirect(url_for('glossario'))
 
+@app.route('/editar_termo/<int:termo_id>')
+def editar_termo(termo_id):
+    # Carrega termo pelo índice e redireciona para um formulário de edição
+    pass
+
+@app.route('/alterar_termo/<int:termo_id>', methods=['POST'])
+def alterar_termo(termo_id):
+    # Salva alterações feitas no termo
+    pass
+
 @app.route('/excluir_termo/<int:termo_id>', methods=['POST'])
 def excluir_termo(termo_id):
 
-    with open('bd_glossario.csv', 'r', newline='') as file:
+    with open('bd_glossario.csv', 'r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
         linhas = list(reader)
 

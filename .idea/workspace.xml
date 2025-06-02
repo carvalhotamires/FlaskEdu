@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Fiz as alterações para funcionar o header em todas as paginas">
-      <change afterPath="$PROJECT_DIR$/static/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/novo_termo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/251-cc-grupo13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/251-cc-grupo13.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fundamentos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/glossario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/glossario.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,6 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tamir\Documents\GitHub\FlaskEdu\static\images" />
-      <recent name="C:\Users\tamir\Documents\GitHub\FlaskEdu\static" />
     </key>
   </component>
   <component name="RunManager">
@@ -140,15 +140,39 @@
       <option name="project" value="LOCAL" />
       <updated>1748819720202</updated>
     </task>
-    <task id="LOCAL-00003" summary="Fiz as alterações para funcionar o header em todas as paginas">
+    <task id="LOCAL-00003" summary="Inclusão da tabela com os termos e definições">
       <option name="closed" value="true" />
-      <created>1748880721075</created>
+      <created>1748893258926</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1748880721075</updated>
+      <updated>1748893258926</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="botões glossario">
+      <option name="closed" value="true" />
+      <created>1748894317801</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748894317801</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Remoção do botão alterar">
+      <option name="closed" value="true" />
+      <created>1748894425217</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748894425217</updated>
+    </task>
+    <task id="LOCAL-00006" summary="botão editar e alterar">
+      <option name="closed" value="true" />
+      <created>1748894463715</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748894463715</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +189,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="alterei o css header para entender que o css é so para o header.html" />
     <MESSAGE value="Fiz as alterações para funcionar o header em todas as paginas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fiz as alterações para funcionar o header em todas as paginas" />
+    <MESSAGE value="Inclusão da tabela com os termos e definições" />
+    <MESSAGE value="botões glossario" />
+    <MESSAGE value="Remoção do botão alterar" />
+    <MESSAGE value="botão editar e alterar" />
+    <option name="LAST_COMMIT_MESSAGE" value="botão editar e alterar" />
   </component>
 </project>
