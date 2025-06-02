@@ -23,7 +23,7 @@ def glossario():
 
     glossario_de_termos = []
 
-    with open('bd_glossario.csv', newline='', encoding='utf-8') as csvfile:
+    with open('bd_glossario.csv', newline='', encoding='latin-1') as csvfile:
         reader = csv.reader(csvfile, delimiter=';')
 
         for t in reader:
