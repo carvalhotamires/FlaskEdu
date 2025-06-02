@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="troquei utf-8 para latin-1 porque tava dando erro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bd_glossario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bd_glossario.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/equipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/equipe.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/novo_termo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo_termo.html" afterDir="false" />
     </list>
@@ -219,7 +216,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748897066622</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="troquei utf-8 para latin-1 porque tava dando erro">
+      <option name="closed" value="true" />
+      <created>1748898504689</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748898504689</updated>
+    </task>
+    <task id="LOCAL-00014" summary="texto no centro">
+      <option name="closed" value="true" />
+      <created>1748899049648</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1748899049648</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,7 +259,7 @@
     <MESSAGE value="troquei de utf-8 para latin-1 porque tava dando erro" />
     <MESSAGE value="nevermind troquei de volta pra utf-8" />
     <MESSAGE value="troquei utf-8 para latin-1 porque tava dando erro" />
-    <option name="LAST_COMMIT_MESSAGE" value="troquei utf-8 para latin-1 porque tava dando erro" />
-    <option name="LAST_CHUNK_COMMIT_MESSAGE" value="não dá, só pega assim mesmo" />
+    <MESSAGE value="texto no centro" />
+    <option name="LAST_COMMIT_MESSAGE" value="texto no centro" />
   </component>
 </project>

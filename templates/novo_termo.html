@@ -2,21 +2,27 @@
 {% block conteudo %}
 <h1>Adicionar Termo</h1>
 
-<form action="{{ url_for('criar_termo') }}" method="post">
-  <!-- Campo do termo -->
-  <div class="mb-3">
-    <label for="termo" class="form-label">Termo</label>
-    <input type="text" class="form-control" id="termo" name="termo" required>
-  </div>
+<form method="POST" action="{{ url_for('glossario') }}">
+    <!-- Seção 1: Termo -->
+    <div style="margin-top: 20px; text-align: center">
+        <h3 style="font-size: 1.5rem">Termo</h3>
+        <input type="text" id="termo" name="termo" required
+               style="width: 65%; padding: 10px; border-radius: 5px; border: none;">
+    </div>
 
-  <!-- Campo da definição -->
-  <div class="mb-3">
-    <label for="definicao" class="form-label">Definição</label>
-    <textarea class="form-control" id="definicao" name="definicao" rows="3" required></textarea>
-  </div>
+    <!-- Seção 2: Definição -->
+    <div style="margin-bottom: 20px; text-align: center">
+        <h3 style="font-size: 1.5rem">Definição</h3>
+        <textarea id="definicao" name="definicao" required
+                  style="width: 65%; height: 100px; padding: 10px; border-radius: 5px; border: none;"></textarea>
+    </div>
 
-  <!-- Botão -->
-  <button type="submit" class="btn btn-primary">Enviar</button>
+    <!-- Botão -->
+    <div style="text-align: center;">
+        <button type="submit" style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
+            ➕ Adicionar
+        </button>
+    </div>
 </form>
 
 {% endblock %}
