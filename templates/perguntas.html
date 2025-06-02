@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chatbot Gemini</title>
 </head>
 <body>
-    
+    <h1>Faça sua pergunta ao Chatbot</h1>
+    <form action="/responder" method="post">
+        <input type="text" name="pergunta" placeholder="Digite sua pergunta aqui" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if resposta %}
+        <h2>Resposta do Gemini:</h2>
+        <p>{{ resposta }}</p>
+    {% endif %}
+
+    <p><a href="/">Voltar à página inicial</a></p>
 </body>
 </html>
