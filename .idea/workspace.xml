@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Fiz as alterações para funcionar o header em todas as paginas">
-      <change afterPath="$PROJECT_DIR$/templates/novo_termo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/251-cc-grupo13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/251-cc-grupo13.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="troquei utf-8 para latin-1 porque tava dando erro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/glossario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/glossario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bd_glossario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bd_glossario.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/equipe.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/equipe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/novo_termo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo_termo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +171,55 @@
       <option name="project" value="LOCAL" />
       <updated>1748894463715</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alterações no glossario, incluí novas funções no app.py e criei o novo_termo.html">
+      <option name="closed" value="true" />
+      <created>1748895493121</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748895493121</updated>
+    </task>
+    <task id="LOCAL-00008" summary="atualizar nome">
+      <option name="closed" value="true" />
+      <created>1748895863951</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748895863951</updated>
+    </task>
+    <task id="LOCAL-00009" summary="cabecalho glossario">
+      <option name="closed" value="true" />
+      <created>1748896028539</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748896028539</updated>
+    </task>
+    <task id="LOCAL-00010" summary="troquei de utf-8 para latin-1 porque tava dando erro">
+      <option name="closed" value="true" />
+      <created>1748896741659</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748896741659</updated>
+    </task>
+    <task id="LOCAL-00011" summary="nevermind troquei de volta pra utf-8">
+      <option name="closed" value="true" />
+      <created>1748896868162</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748896868162</updated>
+    </task>
+    <task id="LOCAL-00012" summary="troquei utf-8 para latin-1 porque tava dando erro">
+      <option name="closed" value="true" />
+      <created>1748897066622</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748897066622</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +240,13 @@
     <MESSAGE value="botões glossario" />
     <MESSAGE value="Remoção do botão alterar" />
     <MESSAGE value="botão editar e alterar" />
-    <option name="LAST_COMMIT_MESSAGE" value="botão editar e alterar" />
+    <MESSAGE value="Alterações no glossario, incluí novas funções no app.py e criei o novo_termo.html" />
+    <MESSAGE value="atualizar nome" />
+    <MESSAGE value="cabecalho glossario" />
+    <MESSAGE value="troquei de utf-8 para latin-1 porque tava dando erro" />
+    <MESSAGE value="nevermind troquei de volta pra utf-8" />
+    <MESSAGE value="troquei utf-8 para latin-1 porque tava dando erro" />
+    <option name="LAST_COMMIT_MESSAGE" value="troquei utf-8 para latin-1 porque tava dando erro" />
+    <option name="LAST_CHUNK_COMMIT_MESSAGE" value="não dá, só pega assim mesmo" />
   </component>
 </project>
