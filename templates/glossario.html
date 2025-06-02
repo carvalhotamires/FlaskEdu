@@ -48,7 +48,29 @@
             <td>{{ loop.index }}</td>    <!-- Índice começa em 1 -->
             <td>{{ item[0] }}</td>       <!-- Termo -->
             <td>{{ item[1] }}</td>       <!-- Definição -->
-            <td></td>                    <!-- Coluna vazia -->
+            <td>
+                <div style="display: flex; gap: 20px;"><!-- Botão EDITAR -->
+                    <a href="{{ url_for('editar_termo', termo_id=loop.index0) }}">
+                        <button style="background-color: #2980b9; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-right: 5px;">
+                            ✏️ Editar
+                        </button>
+                    </a>
+
+                    <!-- Botão ALTERAR -->
+                    <form method="POST" action="{{ url_for('alterar_termo', termo_id=loop.index0) }}" style="display:inline;">
+                        <button type="submit" style="background-color: #f39c12; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-right: 5px;">
+                            💾 Alterar
+                        </button>
+                    </form>
+
+                    <!-- Botão EXCLUIR -->
+                    <form method="POST" action="{{ url_for('excluir_termo', termo_id=loop.index0) }}" style="display:inline;">
+                        <button type="submit" style="background-color: #e74c3c; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            🗑️ Excluir
+                        </button>
+                    </div>
+                </form>
+            </td>
         </tr>
         {% endfor %}
     </tbody>
