@@ -56,13 +56,6 @@
                         </button>
                     </a>
 
-                    <!-- Botão ALTERAR -->
-                    <form method="POST" action="{{ url_for('alterar_termo', termo_id=loop.index0) }}" style="display:inline;">
-                        <button type="submit" style="background-color: #f39c12; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-right: 5px;">
-                            💾 Alterar
-                        </button>
-                    </form>
-
                     <!-- Botão EXCLUIR -->
                     <form method="POST" action="{{ url_for('excluir_termo', termo_id=loop.index0) }}" style="display:inline;">
                         <button type="submit" style="background-color: #e74c3c; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
