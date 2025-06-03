@@ -29,10 +29,10 @@ def glossario():
         for t in reader:
             glossario_de_termos.append(t)
 
-    return render_template('glossario.html', glossario=glossario_de_termos)
+    return render_template('dicionario.html', glossario=glossario_de_termos)
 
-@app.route('/criar_termo', methods=['POST'])
-def criar_termo():
+@app.route('/novo_termo', methods=['POST'])
+def novo_termo():
 
     termo = request.form['termo']
     definicao = request.form['definicao']

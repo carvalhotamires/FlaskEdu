@@ -4,11 +4,6 @@
 
 {% block conteudo %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Dicionário de Termos</title>
     <style>
         table {
             width: 60%;
@@ -33,7 +28,7 @@
             }
     </style>
     <link rel="stylesheet" href="header.css">
-</head>
+
 <body>
     <table>
     <thead>
@@ -63,17 +58,14 @@
                         <button type="submit" style="background-color: #e74c3c; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
                             🗑️ Excluir
                         </button>
-                </div>
-
-
+                    </div>
             </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 
-    <div style="display: block; margin: 20px auto text-align: center;">
-        <a href="{{ url_for('novo_termo') }}">
+
         <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
             <a href="{{ url_for('novo_termo') }}">
                  <button style="background-color: purple; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
@@ -86,6 +78,6 @@
     </div>
 
 </body>
-</html>
+
 
 {% endblock %}
