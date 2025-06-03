@@ -12,7 +12,7 @@ api_key = os.getenv('GEMINI_API_KEY')
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index.html')
+    return render_template('inicio.html')
 
 @app.route('/equipe')
 def equipe():
@@ -31,11 +31,6 @@ def glossario():
 
     return render_template('glossario.html', glossario=glossario_de_termos)
 
-
-@app.route('/novo_termo')
-def novo_termo():
-    return render_template('novo_termo.html')
-
 @app.route('/criar_termo', methods=['POST'])
 def criar_termo():
 
@@ -48,35 +43,41 @@ def criar_termo():
 
     return redirect(url_for('glossario'))
 
-@app.route('/editar_termo/<int:termo_id>')
-def editar_termo(termo_id):
-    # Carrega termo pelo índice e redireciona para um formulário de edição
-    pass
-
-@app.route('/alterar_termo/<int:termo_id>', methods=['POST'])
-def alterar_termo(termo_id):
-    # Salva alterações feitas no termo
-    pass
-
 @app.route('/excluir_termo/<int:termo_id>', methods=['POST'])
 def excluir_termo(termo_id):
 
     with open('bd_glossario.csv', 'r', newline='', encoding='utf-8') as file:
-        reader = csv.reader(file)
+        reader = csv.reader(file, delimiter=';')
         linhas = list(reader)
 
-    for i, linha in enumerate(linhas):
-        if i == termo_id:
-            del linhas[i]
-            break
+    # Remover a linha correspondente ao termo_id
+    if 0 <= termo_id < len(linhas):
+        del linhas[termo_id]
 
-    with open('bd_glossario.csv', 'w', newline='') as file:
+    with open('bd_glossario.csv', 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerows(linhas)
 
     return redirect(url_for('glossario'))
 
+@app.route('/editar_termo/<int:termo_id>', methods=['POST'])
+def editar_termo(termo_id):
+    novo_termo = request.form['termo']
+    nova_definicao = request.form['definicao']
 
+    with open('bd_glossario.csv', 'r', newline='', encoding='utf-8') as file:
+        reader = csv.reader(file, delimiter=';')
+        linhas = list(reader)
+
+    # Atualizar a linha correspondente ao termo_id
+    if 0 <= termo_id < len(linhas):
+        linhas[termo_id] = [novo_termo, nova_definicao]
+
+    with open('bd_glossario.csv', 'w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file, delimiter=';')
+        writer.writerows(linhas)
+
+    return redirect(url_for('glossario'))
 
 #Config Generative AI
 genai.configure(api_key=api_key)
