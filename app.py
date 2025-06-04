@@ -29,11 +29,15 @@ def glossario():
         for t in reader:
             glossario_de_termos.append(t)
 
-    return render_template('dicionario.html', glossario=glossario_de_termos)
+    return render_template('dicionario.html', glossario=glossario_de_termos, editar_id=None)
 
-@app.route('/novo_termo', methods=['POST'])
+
+@app.route('/novo_termo', methods=['GET'])
 def novo_termo():
+    return render_template('novo_termo.html')
 
+@app.route('/criar_termo', methods=['POST'])
+def criar_termo():
     termo = request.form['termo']
     definicao = request.form['definicao']
 
@@ -42,6 +46,9 @@ def novo_termo():
         writer.writerow([termo, definicao])
 
     return redirect(url_for('glossario'))
+
+
+    return render_template('novo_termo.html')
 
 @app.route('/excluir_termo/<int:termo_id>', methods=['POST'])
 def excluir_termo(termo_id):
@@ -69,7 +76,6 @@ def editar_termo(termo_id):
         reader = csv.reader(file, delimiter=';')
         linhas = list(reader)
 
-    # Atualizar a linha correspondente ao termo_id
     if 0 <= termo_id < len(linhas):
         linhas[termo_id] = [novo_termo, nova_definicao]
 
@@ -78,6 +84,18 @@ def editar_termo(termo_id):
         writer.writerows(linhas)
 
     return redirect(url_for('glossario'))
+
+@app.route('/editar_linha/<int:termo_id>')
+def editar_linha(termo_id):
+    glossario_de_termos = []
+    with open('bd_glossario.csv', newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile, delimiter=';')
+        for linha in reader:
+            glossario_de_termos.append(linha)
+
+    return render_template('dicionario.html', glossario=glossario_de_termos, editar_id=termo_id)
+
+
 
 #Config Generative AI
 genai.configure(api_key=api_key)
@@ -104,8 +122,5 @@ def responder():
 @app.route('/header')
 def header():
     return render_template('header.html')
-@app.route('/contato')
-def contato():
-    return render_template('contato.html')
 
 app.run(debug=True)
