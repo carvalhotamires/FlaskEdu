@@ -46,7 +46,7 @@ header nav ul li{
 
 }
 
-header .btn-contato button {
+header .btn-equipe button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
@@ -57,6 +57,6 @@ header .btn-contato button {
 
 }
 
-header .btn-contato button:hover {
+header .btn-equipe button:hover {
     box-shadow: 0px 0px 8px #b58adf; /* Horizontal e Vertical 0 e espalhamento em 8px  (dar um efeito de Sombreado)*/
 }

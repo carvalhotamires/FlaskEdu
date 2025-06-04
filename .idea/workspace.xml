@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Estilização dos botões e forms">
+    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Inclusão de Imagens no início (ainda falta)">
+      <change afterPath="$PROJECT_DIR$/templates/fundamentos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bd_glossario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bd_glossario.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/inicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inicio.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +66,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2xtLJwFTemPgN2k9IJOp8dgBI1l" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -231,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749003978642</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Inclusão de Imagens no início (ainda falta)">
+      <option name="closed" value="true" />
+      <created>1749054908571</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1749054908571</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +271,7 @@
     <MESSAGE value="Alterações no Glossário (agora funciona *-*) e novas funcionalidades" />
     <MESSAGE value="Estilização dos forms de edição de termos" />
     <MESSAGE value="Estilização dos botões e forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estilização dos botões e forms" />
+    <MESSAGE value="Inclusão de Imagens no início (ainda falta)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inclusão de Imagens no início (ainda falta)" />
   </component>
 </project>

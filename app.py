@@ -18,6 +18,10 @@ def home():
 def equipe():
     return render_template('equipe.html')
 
+@app.route('/fundamentos')
+def fundamentos():
+    return render_template('fundamentos.html')
+
 @app.route('/glossario')
 def glossario():
 
@@ -62,7 +66,7 @@ def excluir_termo(termo_id):
         del linhas[termo_id]
 
     with open('bd_glossario.csv', 'w', newline='', encoding='utf-8') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, delimiter=';')
         writer.writerows(linhas)
 
     return redirect(url_for('glossario'))
