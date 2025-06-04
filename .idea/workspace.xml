@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Alterações no Glossário (agora funciona *-*) e novas funcionalidades">
+    <list default="true" id="bda395f7-33c5-40d7-8404-5ee34d501765" name="Changes" comment="Estilização dos botões e forms">
+      <change beforePath="$PROJECT_DIR$/bd_glossario.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bd_glossario.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dicionario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dicionario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/novo_termo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo_termo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749002493254</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Estilização dos botões e forms">
+      <option name="closed" value="true" />
+      <created>1749002523649</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749002523649</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,6 +230,7 @@
     <MESSAGE value="botão editar e alterar" />
     <MESSAGE value="Alterações no Glossário (agora funciona *-*) e novas funcionalidades" />
     <MESSAGE value="Estilização dos forms de edição de termos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estilização dos forms de edição de termos" />
+    <MESSAGE value="Estilização dos botões e forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estilização dos botões e forms" />
   </component>
 </project>
