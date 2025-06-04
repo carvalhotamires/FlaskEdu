@@ -104,5 +104,8 @@ def responder():
 @app.route('/header')
 def header():
     return render_template('header.html')
+@app.route('/contato')
+def contato():
+    return render_template('contato.html')
 
 app.run(debug=True)
