@@ -43,8 +43,12 @@
 
             {% if editar_id is defined and loop.index0 == editar_id %}
             <form action="{{ url_for('editar_termo', termo_id=loop.index0) }}" method="POST">
-                <td><input type="text" name="termo" value="{{ item[0] }}" required></td>
-                <td><input type="text" name="definicao" value="{{ item[1] }}" required></td>
+                <td>
+                    <input  type="text" name="termo" value="{{ item[0] }}" required
+                    style="width: 95%; padding: 6px; border-radius: 5px; border: none;"></td>
+                <td>
+                    <input type="text" name="definicao" value="{{ item[1] }}" required
+                    style="width: 95%; padding: 6px; border-radius: 5px; border: none;"></td>
                 <td>
                     <button type="submit" style="background-color: green; color: white;">💾 Salvar</button>
                 </td>
